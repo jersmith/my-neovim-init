@@ -2,11 +2,13 @@
 I've finally moved my vim configuration to a full lua-based neovim configuration.
 
 ## TL;DR
+This script will setup the config. _But_ you should go through the Caveat and Prereqs below first.
+
 ```
 wget -qO- https://raw.githubusercontent.com/jersmith/my-neovim-init/install.sh | bash
 ```
 
-## Caveats
+## Caveat
 
 The Debian version of neovim is still old. It's best to install from the github [releases](https://github.com/neovim/neovim/releases/).
 
@@ -30,6 +32,21 @@ export PATH=~/.bin:$PATH
 ```
 
 YMMV
+
+## Prereqs
+The plugins require some native stuff to be installed, and at least one of the plugins needs to build some native code. Here's what you will need:
+
+```
+sudo apt install build-essential curl fd-find 
+```
+
+And one more that needs to be installed from a [package](https://github.com/BurntSushi/ripgrep/releases):
+
+```
+wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+sudo dkpk -i ripgrep_14.1.0-1_amd64.deb
+```
+
 
 ## Configuration
 
