@@ -14,7 +14,7 @@ return {
       local configs = require('nvim-treesitter.configs')
 
       configs.setup({
-          ensure_installed = { 'c', 'lua', 'javascript', 'html', 'markdown', 'typescript' },
+          ensure_installed = { 'c', 'lua', 'javascript', 'html', 'markdown', 'typescript', 'vimdoc' },
           sync_install = false,
           highlight = { enable = true },
           indent = { enable = true },  
@@ -31,6 +31,14 @@ return {
     config = function()
       require('nvim-tree').setup {}
     end,
+  },
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true   
+    },
   }
 }
 
