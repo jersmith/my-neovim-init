@@ -11,15 +11,26 @@ return {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     config = function () 
-      local configs = require("nvim-treesitter.configs")
+      local configs = require('nvim-treesitter.configs')
 
       configs.setup({
-          ensure_installed = { "c", "lua", "javascript", "html" },
+          ensure_installed = { 'c', 'lua', 'javascript', 'html' },
           sync_install = false,
           highlight = { enable = true },
           indent = { enable = true },  
         })
     end
   },
+  {
+    'nvim-tree/nvim-tree.lua',
+    version = '*',
+    lazy = false,
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require('nvim-tree').setup {}
+    end,
+  }
 }
 
