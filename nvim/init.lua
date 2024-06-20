@@ -2,12 +2,16 @@ require("settings")
 require("keymaps")
 require("setup-lazy")
 
-require("lazy").setup({
-    "askfiy/visual_studio_code",
-    priority = 100,
-    config = function()
-        vim.cmd([[colorscheme visual_studio_code]])
-    end,
-})
+-- loads the plugins
+require("lazy").setup("plugins")
 
-require("visual_studio_code").setup()
+-- initialize the plugins (that need it)
+require("lualine").setup()
+
+-- setup telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+

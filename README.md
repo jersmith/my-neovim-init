@@ -36,8 +36,19 @@ YMMV
 
 ## Lua
 
-
 ## Plugins
+
+### lualine
+Requires a patched font for the icons. I was able to load Firecode, then switch back to Berkeley Mono and it seams to work?
+
+### telescope
+This is the thing that replaces the Ag/fzf for me. Kinda complicated to get going. Follow the instructions for the dependencies:
+- plenary
+- ripgrep (instead of Ag); install from .deb
+- telescope-fzf-native (plugin)
+- tree-sitter (requires curl, make/c)
+- fd (apt install fd-find)
+
 
 ## LSP
 
