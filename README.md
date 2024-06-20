@@ -9,10 +9,19 @@ wget -qO- https://raw.githubusercontent.com/jersmith/my-neovim-init/install.sh |
 ```
 
 ## Caveat
+If you have an existing version neovim installed, you should remove it:
 
-The Debian version of neovim is still old. It's best to install from the github [releases](https://github.com/neovim/neovim/releases/).
+`sudo apt remove neovim`
 
-In particular, Debian 12 installs neovim 7.2. The [lazy](https://github.com/folke/lazy.nvim) package manager needs at least neovim 8.2. The current version of neovim is 10.0.
+Also, it's a good idea to remove these:
+
+```
+~/.vim
+~/.config/nvim
+~/.local/share/nvim
+```
+
+It's best to install from the github [releases](https://github.com/neovim/neovim/releases/), rather than the package manager.
 
 There are many ways to do this, here's an example:
 
@@ -31,8 +40,6 @@ Make sure to add ~/.bin to the front of your PATH, for example in your `.bashrc`
 export PATH=~/.bin:$PATH
 ```
 
-YMMV
-
 ## Prereqs
 The plugins require some native stuff to be installed, and at least one of the plugins needs to build some native code. Here's what you will need:
 
@@ -47,6 +54,15 @@ wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1
 sudo dkpk -i ripgrep_14.1.0-1_amd64.deb
 ```
 
+Finally, some of the plugins require icons. These are supplied via a patched font that has icons included. You can find some [here](https://www.nerdfonts.com/font-downloads). I use this [one](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip).
+
+Do this:
+- Create a `.fonts` directory 
+- Add the font files from the xip to this folder (or a sub-folder)
+- Go do the terminal preferences, appearance, and select one of the fonts
+- neovim will use the terminal setting
+
+Hint: once you see the icons, you can actually select a different font in the terminal preferences, even if it isn't patched. Neovim will still use the patched font as a fallback for icons
 
 ## Configuration
 
