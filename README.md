@@ -69,8 +69,8 @@ Do this:
 ### Fuzzy Search
 |Command|Action                 |
 |-------|-----------------------|
-|\ff    |Find files by name     |
-|\fb    |Find files in buffers  |
+|\f    |Find files by name     |
+|\b    |Find files in buffers  |
 |\fg    |Live grep across files |
 |\fh    |Live grep across help  |
 
