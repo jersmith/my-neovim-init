@@ -62,7 +62,25 @@ Do this:
 - Go do the terminal preferences, appearance, and select one of the fonts
 - neovim will use the terminal setting
 
-Hint: once you see the icons, you can actually select a different font in the terminal preferences, even if it isn't patched. Neovim will still use the patched font as a fallback for icons
+> Hint: once you see the icons, you can actually select a different font in the terminal preferences, even if it isn't patched. Neovim will still use the patched font as a fallback for icons
+
+## How To
+
+### Fuzzy Search
+|Command|Action                 |
+|-------|-----------------------|
+|\ff    |Find files by name     |
+|\fb    |Find files in buffers  |
+|\fg    |Live grep across files |
+|\fh    |Live grep across help  |
+
+### File Explorer (tree view)
+|Command|Action                 |
+|-------|-----------------------|
+|\tt    |Toggle tree view       |
+|\tf    |Open tree expanded on current buffer|
+|\tc    |Collapse all directories|
+
 
 ## Configuration
 
