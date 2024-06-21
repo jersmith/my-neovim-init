@@ -1,12 +1,12 @@
-require("settings")
-require("keymaps")
-require("setup-lazy")
+require('settings')
+require('keymaps')
+require('setup-lazy')
 
 -- loads the plugins
-require("lazy").setup("plugins")
+require('lazy').setup('plugins')
 
 -- initialize the plugins (that need it)
-require("lualine").setup {
+require('lualine').setup {
   options = {
     theme = 'tokyonight'
   }
