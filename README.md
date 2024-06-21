@@ -81,6 +81,16 @@ Do this:
 |\tf    |Open tree expanded on current buffer|
 |\tc    |Collapse all directories|
 
+### Git
+|Command|Action                 |
+|-------|-----------------------|
+|\gs    | Neogit status window  |
+|du     | Diff unstaged         |
+|\e     | Focus in tree         |
+|s      | Stage                 |
+|c      | Commit                |
+|q      | Close                 |
+
 
 ## Configuration
 
