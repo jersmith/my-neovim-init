@@ -5,7 +5,7 @@ I've finally moved my vim configuration to a full lua-based neovim configuration
 This script will setup the config. _But_ you should go through the Caveat and Prereqs below first.
 
 ```
-wget -qO- https://raw.githubusercontent.com/jersmith/my-neovim-init/install.sh | bash
+wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.2/install.sh | bash
 ```
 
 ## Caveat
