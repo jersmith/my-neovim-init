@@ -5,11 +5,13 @@ I've finally moved my vim configuration to a full lua-based neovim configuration
 This script will setup the config. _But_ you should go through the Caveat and Prereqs below first.
 
 ```
-wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.2.1/install.sh | bash
+wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.2.2/install.sh | bash
 ```
 
 ## Caveat
-If you have an existing version neovim installed, you should remove it:
+> Disclaimer: I've only tested with xfce on Debian
+
+If you have an existing version of neovim installed, you should remove it:
 
 `sudo apt remove neovim`
 
@@ -21,7 +23,7 @@ Also, it's a good idea to remove these:
 ~/.local/share/nvim
 ```
 
-It's best to install from the github [releases](https://github.com/neovim/neovim/releases/), rather than the package manager.
+It's best to install neovim from the github [releases](https://github.com/neovim/neovim/releases/), rather than the package manager. Many of the plugins need v9+ and latest is even better.
 
 There are many ways to do this, here's an example:
 
@@ -31,7 +33,6 @@ tar -xvf nvim-linux64.tar.gz
 sudo mv nvim-linux64 /usr/local/bin
 mkdir .bin && cd .bin
 ln -s /usr/local/bin/nvim-linux64/bin/nvim vi
-ln -s /usr/local/bin/nvim-linux64/bin/nvim vnvim
 ```
 
 Make sure to add ~/.bin to the front of your PATH, for example in your `.bashrc`:
@@ -58,8 +59,8 @@ Finally, some of the plugins require icons. These are supplied via a patched fon
 
 Do this:
 - Create a `.fonts` directory 
-- Add the font files from the xip to this folder (or a sub-folder)
-- Go do the terminal preferences, appearance, and select one of the fonts
+- Add the font files from the zip to this folder (or a sub-folder)
+- Go to the terminal preferences, appearance, and select one of the fonts
 - neovim will use the terminal setting
 
 > Hint: once you see the icons, you can actually select a different font in the terminal preferences, even if it isn't patched. Neovim will still use the patched font as a fallback for icons
@@ -69,7 +70,7 @@ Do this:
 ### Fuzzy Search
 |Command|Action                 |
 |-------|-----------------------|
-|\f    |Find files by name     |
+|\ff    |Find files by name     |
 |\b    |Find files in buffers  |
 |\fg    |Live grep across files |
 |\fh    |Live grep across help  |
@@ -91,6 +92,21 @@ Do this:
 |c      | Commit                |
 |q      | Close                 |
 
+### Completion
+|Command|Action                 |
+|-------|-----------------------|
+|<C-o>  | Complete from tags file  |
+|<C-x>  | Same                     |
+|<C-p>  | Complete from local file |
+|<C-]>  | Jump to tag              |
+
+
+### General
+|Command|Action                 |
+|-------|-----------------------|
+|<CR>    | Clear highlighting   |
+|<C-e>  | Swap buffers          |
+|<C-t>  | Jump back             |
 
 ## Configuration
 
