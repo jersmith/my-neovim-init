@@ -3,7 +3,12 @@ require('keymaps')
 require('setup-lazy')
 
 -- loads the plugins
-require('lazy').setup('plugins')
+require('lazy').setup({
+  spec = {
+    import = 'plugins'
+  },
+  rocks = { enabled = false }
+})
 
 -- initialize the plugins (that need it)
 require('lualine').setup {
