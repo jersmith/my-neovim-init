@@ -53,3 +53,5 @@ require('telescope').setup {
     }
   }
 }
+
+require('rel-num')

@@ -9,6 +9,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.listchars = { trail = '.', tab = '>~' }
 opt.list = true
+opt.linebreak = true
 
 -- disable netrw 
 vim.g.loaded_netrw = 1
