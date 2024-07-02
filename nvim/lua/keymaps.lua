@@ -1,5 +1,5 @@
 -- Clear highlights
-vim.keymap.set('n', '<CR>', ':noh<CR><CR>')
+vim.keymap.set('n', '<CR>', ':noh<CR>')
 
 -- Tree
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>')
