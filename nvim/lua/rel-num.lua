@@ -18,3 +18,12 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     vim.opt.relativenumber = true
   end
 })
+
+-- Turn on relative numbers when entering a window
+-- This only works because we always enter in normal mode
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  group = rel_num_group,
+  callback = function()
+    vim.opt.relativenumber = true
+  end
+})
