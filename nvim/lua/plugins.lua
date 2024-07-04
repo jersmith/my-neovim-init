@@ -10,14 +10,14 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    config = function () 
+    config = function ()
       local configs = require('nvim-treesitter.configs')
 
       configs.setup({
           ensure_installed = { 'c', 'lua', 'javascript', 'html', 'markdown', 'typescript', 'vimdoc' },
           sync_install = false,
           highlight = { enable = true },
-          indent = { enable = true },  
+          indent = { enable = true },
         })
     end
   },
@@ -37,7 +37,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true   
+      transparent = true
     },
   },
   {
@@ -48,6 +48,7 @@ return {
       'nvim-telescope/telescope.nvim',
     },
     config = true
-  }
+  },
+  'neovim/nvim-lspconfig'
 }
 
