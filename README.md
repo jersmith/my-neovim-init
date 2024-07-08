@@ -106,6 +106,8 @@ The config is only setup to support Lua and Typescript atm.
 |<C-x><C-o>   | Completion      |
 |K            | Hover           |
 |<C-]>        | Jump to definition |
+|[d           | Jump to prev error |
+|]d           | Jump to next error |
 
 
 ### General
