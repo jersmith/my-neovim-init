@@ -103,7 +103,7 @@ The config is only setup to support Lua and Typescript atm.
 ### LSP
 |Command|Action                 |
 |-------|-----------------------|
-|<C-x><C-o>   | Completion      |
+|\<C-x\>\<C-o\>   | Completion      |
 |K            | Hover           |
 |<C-]>        | Jump to definition |
 |[d           | Jump to prev error |
@@ -113,25 +113,7 @@ The config is only setup to support Lua and Typescript atm.
 ### General
 |Command|Action                 |
 |-------|-----------------------|
-|<CR>   | Clear highlighting    |
-|<C-e>  | Swap buffers          |
-|<C-t>  | Jump back to tag      |
-
-## Configuration
-
-
-## Lua
-
-## Plugins
-
-### tokyonight
-### lualine
-### nvim-treesitter
-### nvim-tree
-### telescope
-### neo-git
-### diffview
-### lspconfig
-
-## LSP
+|\<CR\>   | Clear highlighting    |
+|\<C-e\>  | Swap buffers          |
+|\<C-t\>  | Jump back to tag      |
 
