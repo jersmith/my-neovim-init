@@ -28,7 +28,7 @@ It's best to install neovim from the github [releases](https://github.com/neovim
 There are many ways to do this, here's an example:
 
 ```
-wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz
 tar -xvf nvim-linux64.tar.gz
 sudo mv nvim-linux64 /usr/local/bin
 mkdir .bin && cd .bin
