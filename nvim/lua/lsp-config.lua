@@ -15,6 +15,6 @@ if vim.fn.executable('lua-language-server') == 1 then
 end
 
 if vim.fn.executable('typescript-language-server') == 1 then
-  require('lspconfig').tsserver.setup({
+  require('lspconfig').ts_ls.setup({
   })
 end
