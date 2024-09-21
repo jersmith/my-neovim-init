@@ -1,5 +1,5 @@
 # My Neovim init
-I've finally moved my vim configuration to a full lua-based neovim configuration.
+A simple configuration for Neovim that I find easy to maintain. It includes only the basics.
 
 ## TL;DR
 This script will setup the config. _But_ you should go through the Caveat and Prereqs below first.
@@ -9,7 +9,7 @@ wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.4.2/install.sh | bas
 ```
 
 ## Caveat
-> Disclaimer: I've only tested with xfce on Debian
+> Disclaimer: I've only tested with xfce on Debian, although I do occasionally run it on Powershell (instructions not included).
 
 If you have an existing version of neovim installed, you should remove it:
 
@@ -62,8 +62,8 @@ sudo apt install build-essential curl fd-find
 And one more that needs to be installed from a [package](https://github.com/BurntSushi/ripgrep/releases):
 
 ```
-wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
-sudo dkpk -i ripgrep_14.1.0-1_amd64.deb
+wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep_14.1.1-1_amd64.deb
+sudo dkpk -i ripgrep_14.1.1-1_amd64.deb
 ```
 
 If you want to use an LSP server, you'll need to install one for each language you are using. For example, for Typescript:
@@ -89,6 +89,8 @@ The config is only setup to support Lua and Typescript atm.
 |\tt    |Toggle tree view       |
 |\tf    |Open tree expanded on current buffer|
 |\tc    |Collapse all directories|
+|g?     |Help                   |
+|q      |Close                  |
 
 ### Git
 |Command|Action                 |
