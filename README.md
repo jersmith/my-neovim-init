@@ -5,7 +5,7 @@ A simple configuration for Neovim that I find easy to maintain. It includes only
 This script will setup the config. _But_ you should go through the Caveat and Prereqs below first.
 
 ```
-wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.4.2/install.sh | bash
+wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.5.0/install.sh | bash
 ```
 
 ## Caveat
@@ -28,7 +28,7 @@ It's best to install neovim from the github [releases](https://github.com/neovim
 There are many ways to do this, here's an example:
 
 ```
-wget https://github.com/neovim/neovim/releases/download/v0.11.0/nvim-linux-x86_64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.tar.gz
 tar -xvf nvim-linux-x86_64.tar.gz
 sudo mv nvim-linux-x86_64 /usr/local/bin
 mkdir .bin && cd .bin
@@ -43,7 +43,7 @@ export PATH=~/.bin:$PATH
 
 ## Prereqs
 
-Some of the plugins require icons. These are supplied via a patched font that has icons included. You can find some [here](https://www.nerdfonts.com/font-downloads). I use this [one](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip).
+Some of the plugins require icons. These are supplied via a patched font that has icons included. You can find some [here](https://www.nerdfonts.com/font-downloads). I use this [one](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip).
 
 Do this:
 - Create a `.fonts` directory 
@@ -65,13 +65,35 @@ And one more that needs to be installed from a [package](https://github.com/Burn
 wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep_14.1.1-1_amd64.deb
 sudo dkpk -i ripgrep_14.1.1-1_amd64.deb
 ```
+## LSP
 
-If you want to use an LSP server, you'll need to install one for each language you are using. For example, for Typescript:
+If you want to use an LSP server, you'll need to install one for each language you are using. 
+
+### Typescript
+
+Assuming you have a recent version of [node](https://github.com/nvm-sh/nvm) installed...
+
 ```
 npm i -g typescript typescript-language-server
 ```
 
-The config is only setup to support Lua and Typescript atm.
+### Lua
+
+Build and install [Lua](https://www.lua.org/download.html) from source.
+Install the [lua-language-server](https://luals.github.io/#neovim-install).
+
+### Ruby
+
+Assuming you have a recent version of [ruby](https://rbenv.org/) installed...
+
+Install `ruby-lsp`:
+
+`gem install ruby-lsp`
+
+Make sure it can be executed from the command line.
+
+The config is only setup to support Lua, Typescript, and Ruby at the moment. But look in
+`nvim/lua/lsp-config.lua` to setup others.
 
 ## How To
 
