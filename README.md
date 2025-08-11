@@ -5,7 +5,7 @@ A simple configuration for Neovim that I find easy to maintain. It includes only
 This script will setup the config. _But_ you should go through the Caveat and Prereqs below first.
 
 ```
-wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.5.0/install.sh | bash
+wget -qO- https://github.com/jersmith/my-neovim-init/raw/v0.5.1/install.sh | bash
 ```
 
 ## Caveat
@@ -28,7 +28,7 @@ It's best to install neovim from the github [releases](https://github.com/neovim
 There are many ways to do this, here's an example:
 
 ```
-wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.tar.gz
 tar -xvf nvim-linux-x86_64.tar.gz
 sudo mv nvim-linux-x86_64 /usr/local/bin
 mkdir .bin && cd .bin
