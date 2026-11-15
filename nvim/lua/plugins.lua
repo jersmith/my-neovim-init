@@ -9,17 +9,26 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
+    lazy = false,
     build = ':TSUpdate',
-    config = function ()
-      local configs = require('nvim-treesitter.configs')
+    config = function()
+      local ts = require('nvim-treesitter')
 
-      configs.setup({
-          ensure_installed = { 'c', 'lua', 'javascript', 'html', 'markdown', 'typescript', 'vimdoc', 'glimmer' },
-          sync_install = false,
-          highlight = { enable = true },
-          indent = { enable = true },
-        })
-    end
+      -- Install your parsers
+      ts.install({
+        'c', 'lua', 'javascript', 'html', 'markdown', 'typescript', 'vimdoc', 'glimmer'
+      })
+
+      -- Enable built-in Neovim treesitter highlighting and indentation per filetype
+      vim.api.nvim_create_autocmd('FileType', {
+        pattern = { 'c', 'lua', 'javascript', 'html', 'markdown', 'typescript', 'vimdoc', 'glimmer' },
+        callback = function()
+          vim.treesitter.start()
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
+    end,
   },
   {
     'nvim-tree/nvim-tree.lua',
