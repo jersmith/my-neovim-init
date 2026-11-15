@@ -65,6 +65,13 @@ And one more that needs to be installed from a [package](https://github.com/Burn
 wget https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep_14.1.1-1_amd64.deb
 sudo dkpk -i ripgrep_14.1.1-1_amd64.deb
 ```
+## Tree Sitter
+The latest version of tree sitter requires the CLI for the plugin to build.
+
+```
+npm install -g tree-sitter-cli
+```
+
 ## LSP
 
 If you want to use an LSP server, you'll need to install one for each language you are using. 
